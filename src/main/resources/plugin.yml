@@ -1,0 +1,8 @@
+name: SureLandAuth
+version: '1.0'
+main: me.pl.serverplugin.ServerPlugin
+api-version: '1.21'
+commands:
+  reg:
+    description: Регистрация на сервере SureLand.
+    usage: /reg <пароль>
