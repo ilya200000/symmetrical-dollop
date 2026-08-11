@@ -64,16 +64,16 @@ public final class ServerPlugin extends JavaPlugin implements Listener {
         if (sessionCache.containsKey(ip) && System.currentTimeMillis() < sessionCache.get(ip)) {
             // Если сессия жива, автоматически авторизуем игрока
             authenticatedPlayers.add(player);
-            player.sendMessage(ChatColor.GREEN + " [SureLandAuth] Автоматический вход по IP-сессии. Добро пожаловать!");
+            player.sendMessage(ChatColor.GREEN + " [BustMC] Автоматический вход по IP-сессии. Добро пожаловать!");
             logAction(player.getName(), ip, "AUTO_LOGIN_SESSION");
             return;
         }
 
         // Если сессии нет, просим войти или зарегистрироваться
         if (RegCommand.isRegistered(player.getName())) {
-            player.sendMessage(ChatColor.YELLOW + " [SureLandAuth] Пожалуйста, войдите: /login <пароль>");
+            player.sendMessage(ChatColor.YELLOW + " [BustMC] Пожалуйста, войдите: /login <пароль>");
         } else {
-            player.sendMessage(ChatColor.RED + " [SureLandAuth] Вы не зарегистрированы! Введите: /reg <пароль>");
+            player.sendMessage(ChatColor.RED + " [BustMC] Вы не зарегистрированы! Введите: /reg <пароль>");
         }
     }
 
